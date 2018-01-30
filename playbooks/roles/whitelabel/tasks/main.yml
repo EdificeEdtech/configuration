@@ -19,15 +19,15 @@
 
 # Discovery
 
-- name: Setup MySql Database
-  shell: 'mysql -u root -e "{{ item }}"'
-  with_items: "{{ WHITELABEL_MYSQL_COMMANDS }}"
-
-- name: Run Discovery migrations
-  shell: ". {{ discovery_home }}/discovery_env && make migrate"
-  args:
-    chdir: "{{ discovery_home }}/{{ discovery_service_name }}"
-  become_user: "{{ discovery_user }}"
+#- name: Setup MySql Database
+#  shell: 'mysql -u root -e "{{ item }}"'
+#  with_items: "{{ WHITELABEL_MYSQL_COMMANDS }}"
+#
+#- name: Run Discovery migrations
+#  shell: ". {{ discovery_home }}/discovery_env && make migrate"
+#  args:
+#    chdir: "{{ discovery_home }}/{{ discovery_service_name }}"
+#  become_user: "{{ discovery_user }}"
 
 - name: Create Sites and Partners
   shell: >
