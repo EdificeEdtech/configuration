@@ -12,6 +12,7 @@
     - "roles/ecommerce/defaults/main.yml"
   roles:
     - aws
+    - edxlocal
     - role: nginx
       nginx_default_sites:
         - discovery
