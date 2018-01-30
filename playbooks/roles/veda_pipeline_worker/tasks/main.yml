@@ -25,7 +25,7 @@
   file:
     path: "{{ veda_pipeline_worker_work_dir }}"
     state: directory
-    owner: "{{ veda_pipeline_worker_service_name }}"
+    owner: "{{ common_web_user }}"
     group: "{{ common_web_group }}"
     mode: 0775
   tags:
