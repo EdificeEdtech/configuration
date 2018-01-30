@@ -21,23 +21,13 @@
     - install
     - install:app-requirements
 
-- name: create worker VEDA_WORKING directory
-  file:
-    path: "{{ veda_pipeline_worker_work_dir }}"
-    state: directory
-    owner: "{{ common_web_user }}"
-    group: "{{ common_web_group }}"
-    mode: 0775
-  tags:
-    - install
-    - install:base
-
 - name: create worker work directories
   file:
     path: "{{ item.value }}"
     state: directory
     owner: "{{ veda_pipeline_worker_service_name }}"
     group: "{{ common_web_group }}"
+    mode: 0775
   with_dict: "{{ veda_pipeline_worker_directories }}"
   tags:
     - install
