@@ -189,5 +189,7 @@ video_pipeline_base_config_default:
   sg_script_name: "{{ VIDEO_PIPELINE_BASE_SG_SCRIPT_NAME }}"
   sg_script_key: "{{ VIDEO_PIPELINE_BASE_SG_SCRIPT_KEY }}"
 
+  lms_base_url: "{{ video_pipeline_base_val_base_url }}"
+
 video_pipeline_base_config_extra: {}
 VIDEO_PIPELINE_BASE_CONFIG: '{{ video_pipeline_base_config_default | combine(video_pipeline_base_config_extra) }}'
