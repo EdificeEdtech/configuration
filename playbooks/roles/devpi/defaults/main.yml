@@ -15,9 +15,6 @@ devpi_user: devpi
 devpi_app_dir: /home/devpi
 devpi_venv_dir: devpi_venv
 devpi_venv_path: "{{ devpi_app_dir }}/venvs/{{ devpi_venv_dir }}"
-DEVPI_SERVER_VERSION: 4.4.0
-DEVPI_WEB_VERSION: 3.2.2
-DEVPI_CLIENT_VERSION: 4.0.0
 
 devpi_environment:
   PIP_NO_CACHE_DIR: "off"
@@ -26,6 +23,7 @@ devpi_environment:
   VIRTUAL_ENV: "{{ devpi_venv_path }}"
   PATH: $VIRTUAL_ENV/bin:$PATH
 
+# The versions below are required to be passed-in to the role.
 DEVPI_REQUIREMENTS:
   - name: devpi-server
     version: "{{ DEVPI_SERVER_VERSION }}"

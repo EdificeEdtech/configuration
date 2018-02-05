@@ -18,8 +18,6 @@ ADD . /edx/app/edx_ansible/edx_ansible
 
 WORKDIR /edx/app/edx_ansible/edx_ansible/docker/plays
 
-RUN echo '{ "allow_root": true }' > /root/.bowerrc
-
 RUN apt-get update
 
 COPY docker/build/devpi/ansible_overrides.yml /
