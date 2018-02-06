@@ -204,7 +204,7 @@ chmod 777 $TEMPDIR
 cd $TEMPDIR
 # Set the CONFIGURATION_TARGET environment variable to use a different branch
 # in the configuration repo, defaults to $TARGET.
-git clone https://github.com/edx/configuration.git \
+git clone https://github.com/EdificeEdtech/configuration.git \
   --depth=1 --single-branch --branch=${CONFIGURATION_TARGET-$TARGET}
 make_config_venv
 
@@ -213,7 +213,7 @@ make_config_venv
 if [[ $TARGET == *dogwood* ]] ; then
   # Run the forum migrations.
   cat > migrate-008-context.js <<"EOF"
-    // from: https://github.com/edx/cs_comments_service/blob/master/scripts/db/migrate-008-context.js
+    // from: https://github.com/EdificeEdtech/cs_comments_service/blob/master/scripts/db/migrate-008-context.js
     print ("Add the new indexes for the context field");
     db.contents.ensureIndex({ _type: 1, course_id: 1, context: 1, pinned: -1, created_at: -1 }, {background: true})
     db.contents.ensureIndex({ _type: 1, commentable_id: 1, context: 1, pinned: -1, created_at: -1 }, {background: true})
