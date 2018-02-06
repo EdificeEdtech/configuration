@@ -26,7 +26,7 @@ if [[ -z "${CONFIGURATION_REPO}" ]]; then
 fi
 
 if [[ -z "${CONFIGURATION_VERSION}" ]]; then
-  CONFIGURATION_VERSION="edifice-open-release/ginkgo.2"
+  CONFIGURATION_VERSION="master"
 fi
 
 echo "CONFIGURATION_VERSION is ${CONFIGURATION_VERSION}"
