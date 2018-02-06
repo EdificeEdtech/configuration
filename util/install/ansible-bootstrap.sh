@@ -29,6 +29,8 @@ if [[ -z "${CONFIGURATION_VERSION}" ]]; then
   CONFIGURATION_VERSION="edifice-open-release/ginkgo.2"
 fi
 
+echo "CONFIGURATION_VERSION is ${CONFIGURATION_VERSION}"
+
 if [[ -z "${UPGRADE_OS}" ]]; then
   UPGRADE_OS=false
 fi
