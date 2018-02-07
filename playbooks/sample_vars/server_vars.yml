@@ -183,7 +183,7 @@
 #  - github_url: "https://github.com/edx/demo-test-course.git"
 #    install: "{{ ENABLE_DEMO_TEST_COURSE }}"
 #    course_id: "course-v1:edX+Test101+course"
-#  - github_url: "https://github.com/edx/edx-demo-course.git"
+#  - github_url: "https://github.com/EdificeEdtech/edx-demo-course.git"
 #    install: "{{ ENABLE_EDX_DEMO_COURSE }}"
 #    course_id: "course-v1:edX+DemoX+Demo_Course"
 #
