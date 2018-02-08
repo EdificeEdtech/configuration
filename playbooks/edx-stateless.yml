@@ -60,7 +60,7 @@
       update_users: True
 
     # Certificate generation
-    # https://github.com/edx/edx-certificates
+    # https://github.com/EdificeEdtech/edx-certificates
     - certs
 
     # Email sending
